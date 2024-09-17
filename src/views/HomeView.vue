@@ -1,22 +1,40 @@
 <template>
   <div class="container">
-    <section class="row" id="Home">
-      <HomeView/>
-    </section>
-    <!-- <section class="row" id="about">
-      <AboutSection/>
-    </section>
-    <section class="row" id="resume">
-      <ResumeSection/>
-    </section>
-    <section class="row" id="project">
-      <Projects/>
-    </section>
-    <section class="row" id="testimonials">
-      <TestimonialsSection />
-    </section>
-    <section class="row" id="reachMe">
-      <ContactPage />
-    </section> -->
-   </div>
+    <div class="row vh-100 align-items-center">
+      <div class="col">
+        <img
+          src="https://mbalentlediko.github.io/Images/static/20240422_100655.jpg"
+          alt="portfolio"
+          loading="lazy"
+          class="img-fluid w-75 shadow rounded-top"
+          data-aos='flip-left'
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+        />
+      </div>
+      <div class="col">
+        <div class="details">
+          <h1 class="display-1">Mbalentle Diko</h1>
+          <p v-if="jobTitles?.length">
+            I am an
+            <span>{{ jobTitles[0].title }} </span>
+          </p>
+          <!-- <spinner v-else /> -->
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
+
+<script setup>
+// import spinner from "./spinner.vue";
+import { computed, onMounted } from "vue";
+import { useStore } from "vuex";
+const store = useStore();
+const jobTitles = computed(() => store.state.jobTitle);
+
+onMounted(() => {
+  store.dispatch("fetchJobTitle");
+  AOS.init()
+});
+</script>
