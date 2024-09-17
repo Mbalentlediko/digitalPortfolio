@@ -1,7 +1,11 @@
 <template>
+<div class="content">
   <NavBar/>
-  <router-view/>
+    <main>
+      <router-view/>
+    </main>
   <Footer/>
+</div>
 </template>
 <script>
 import NavBar from '@/components/NavBar.vue';

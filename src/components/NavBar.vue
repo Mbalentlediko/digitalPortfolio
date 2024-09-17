@@ -7,19 +7,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-            <a class="nav-link "  aria-current="page" to="/" href="#">Home</a>
+            <router-link class="nav-link "  aria-current="page" to="/" href="#">Home</router-link>
             </li>
             <li class="nav-item">
-            <a class="nav-link "  href="#about">About me</a>
+            <router-link class="nav-link "  href="#about">About me</router-link>
             </li>
             <li class="nav-item">
-            <a class="nav-link "  href="#education">Education and Experience</a>
+            <router-link class="nav-link" to="#education">Education and Experience</router-link>
             </li>
             <li class="nav-item">
-            <a class="nav-link "  href="#projects">Projects</a>
+            <router-link class="nav-link "  href="#projects">Projects</router-link>
             </li>
             <li class="nav-item">
-            <a class="nav-link "  href="#contact">Contact Information</a>
+            <router-link class="nav-link "  href="#contact">Contact Information</router-link>
             </li>
             
         </ul>
@@ -63,7 +63,8 @@
 
 /* Navbar Link Hover Effect */
 .nav-link:hover {
-    color: #E63946; /* Red color on hover (E63946) */
+    color: #E63946 !important;
+    background-color: white !important; /* Red color on hover (E63946) */
 }
 
 /* Navbar Toggler (for mobile view) */
