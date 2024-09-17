@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@400;600&display=swap');
+
+#app {
+  
+  
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: white;
+}
+
+.card{
+  margin: auto;
+}
+
+.buttons-box a{
+  border: 2px solid;
+}
+
+/* nav {
+  padding: 30px;
+
+  & ul{
+    & a.nav-link{
+      color: white;
+      background-color: #2b2c68;
+      margin: 1rem;
+      box-shadow: .1vw .1vw .1vw white;
+      transition: all 1s;
+      &:hover{
+        color: #338aca;
+        box-shadow: unset;
+      }
+    }
+  }
+} */
+
+a {
+  text-decoration: none;
+}
+
+nav a {
+  font-weight: bold;
+  
+}
+
+nav a.router-link-exact-active {
+  color: #080808;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+/* Select all images */
+img {
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center;
+}
+/* logo */
+img[alt="logo"] {
+  width: 5rem;
+}
+/* Wrapper */
+:is(.wrapper) {
+  display: grid;
+  grid-template-rows: auto minmax(100dvh, 100%) auto;
+}
+
+/*section  */
+section {
+  scroll-margin-block: 5rem;
+  padding:50px;
+  }
+
+/*testimonial section*/
+img[alt="testimonial-img"]{
+  width: 10rem;
+}
+
+/* media query */
+@media screen and (width<800px) {
+  #landing .row {
+    display: block;
+    height: auto;
+  }
+}
+
+#contact{
+  margin: 0;
+  padding: 0;
+  
+}
+::-webkit-scrollbar{
+  display:none ;
+}
+
+h1{
+  font-family: "Italianno", cursive;
+  color: white;
+}
+.navbar,footer {
+  padding: 30px;
+}
+/* 
+.navbar-brand,
+.navbar-nav .nav-link {
+  color:white !important; 
+}
+
+.navbar-nav .nav-link:hover {
+  color: rgb(193, 218, 218) !important; 
+} */
+@keyframes rotateIn {
+  0% {
+    transform: rotate(-180deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+ .wrapper{
+  background: linear-gradient(to bottom right,#191834, #2b2c68,  #338aca,  #61bdaf) 
+ }
+img[alt='portfolio'] {
+  border-radius: 80px ;
+   
+}
+/* Lighter gray to white gradient for the body */
+body {
+    background: linear-gradient(135deg, #D3D3D3 0%, #E0E0E0 50%, #F5F5F5 100%);
+    font-family: 'Roboto', sans-serif; /* Assuming you're using Roboto for paragraphs */
+    color: #333; /* Darker text color for readability */
+    margin: 0;
+    padding: 0;
+  }
+  
+
+
+/*contact section*/
+
+.contact-icon{
+  color: white;
+  text-decoration: none;
+}
