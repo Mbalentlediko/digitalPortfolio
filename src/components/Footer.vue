@@ -1,5 +1,5 @@
 <template>
-    <footer class="container-fluid">
+    <footer class="container-fluid fixed-bottom">
       <div class="row align-items-center justify-content-center">
         <p class="lead mb-0">
           Mbalentle's portfolio &copy; <span>{{ cYear }}</span>
@@ -23,7 +23,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
   
   footer {
-    background-color: #1D3557; /* Dark navy background */
+    background-color: #9A8C98; /* Dark navy background */
     color: #F1FAEE;
     font-family: "Playfair Display", serif;
     padding: 1rem 2rem;
