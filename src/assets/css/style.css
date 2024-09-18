@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@400;600&display=swap');
 
@@ -9,8 +9,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #F1FAEE;
-  background-color: #457B79;
+  color: #22223B;
+  background-color: #F2E9E4;
 }
 
 .card{
@@ -21,27 +21,6 @@
   border: 2px solid;
 }
 
-/* nav {
-  padding: 30px;
-
-  & ul{
-    & a.nav-link{
-      color: white;
-      background-color: #2b2c68;
-      margin: 1rem;
-      box-shadow: .1vw .1vw .1vw white;
-      transition: all 1s;
-      &:hover{
-        color: #338aca;
-        box-shadow: unset;
-      }
-    }
-  }
-} */
-
-a {
-  text-decoration: none;
-}
 
 nav a {
   font-weight: bold;
@@ -54,34 +33,33 @@ nav a.router-link-exact-active {
 ::-webkit-scrollbar {
   display: none;
 }
-/* Select all images */
+
 img {
   aspect-ratio: 1;
   object-fit: cover;
   object-position: center;
 }
-/* logo */
+
 img[alt="logo"] {
   width: 5rem;
 }
-/* Wrapper */
+
 :is(.wrapper) {
   display: grid;
   grid-template-rows: auto minmax(100dvh, 100%) auto;
 }
 
-/*section  */
+
 section {
   scroll-margin-block: 5rem;
   padding:50px;
   }
 
-/*testimonial section*/
-img[alt="testimonial-img"]{
-  width: 10rem;
+router-link{
+  background-color: #C9ADA7;
 }
 
-/* media query */
+
 @media screen and (width<800px) {
   #landing .row {
     display: block;
@@ -98,22 +76,11 @@ img[alt="testimonial-img"]{
   display:none ;
 }
 
-h1{
-  font-family: "Italianno", cursive;
-  color: white;
-}
+
 .navbar,footer {
   padding: 30px;
 }
-/* 
-.navbar-brand,
-.navbar-nav .nav-link {
-  color:white !important; 
-}
 
-.navbar-nav .nav-link:hover {
-  color: rgb(193, 218, 218) !important; 
-} */
 @keyframes rotateIn {
   0% {
     transform: rotate(-180deg);
@@ -125,9 +92,7 @@ h1{
   }
 }
 
- .wrapper{
-  background: linear-gradient(to bottom right,#191834, #2b2c68,  #338aca,  #61bdaf) 
- }
+
 img[alt='portfolio'] {
   border-radius: 80px ;
    
@@ -135,16 +100,15 @@ img[alt='portfolio'] {
 }
 
 body {
-  background-color: #457B79;
     font-family: 'Roboto', sans-serif; 
     margin: 0;
     padding: 0;
 
   }
-  .wrapper {
-    background-color: #457B79;
-  }
-
+router-link{
+  background-color: #22223B
+  ;
+}
 
 
 
