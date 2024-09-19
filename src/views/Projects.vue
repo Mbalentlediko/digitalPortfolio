@@ -31,14 +31,17 @@
   
   
   <script setup>
-  import { computed, onMounted } from "vue";
+  import store from "@/store";
+import { computed, onMounted } from "vue";
   import { useStore } from "vuex";
   
-  const store = useStore();
   const projects = computed(() => store.state.projects);
   
   onMounted(() => {
     store.dispatch("fetchProjects");
+    console.log(store.state.education);
+    
+    
   });
   </script>
   

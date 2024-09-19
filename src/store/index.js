@@ -109,7 +109,9 @@ export default createStore({
     },
     async fetchProjects(context) {
       try {
-        let { projects } = await (await axios.get(portfolioURL)).data;
+        let {projects} = await (await axios.get(portfolioURL)).data;
+        console.log();
+        
         context.commit("setProjects", projects);
       } catch (e) {
         Swal.fire({
