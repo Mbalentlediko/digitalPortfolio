@@ -10,12 +10,13 @@
       </div>
     </div>
 
+
     <div class="row mb-5">
       <h2 class="section-heading">Technical Skills</h2>
-      <div class="row">
+      <div class="row g-4 justify-content-center"> 
         <template v-if="skills?.techStack?.length">
           <div
-            class="col-md-4"
+            class="col-md-4 d-flex align-items-stretch"
             v-for="(tech, index) in skills.techStack"
             :key="index"
           >
@@ -27,13 +28,12 @@
             </div>
           </div>
         </template>
-     
         <p v-else>Loading technical skills...</p>
       </div>
     </div>
 
-    
-    <div class="row">
+  
+    <div class="row mb-5">
       <h2 class="section-heading">Soft Skills</h2>
       <ul class="list-group soft-skills-list" v-if="skills?.softSkills?.length">
         <li
@@ -46,6 +46,25 @@
       </ul>
       <p v-else>Loading soft skills...</p>
     </div>
+
+
+    <div class="row mb-5">
+      <h2 class="section-heading">Hobbies</h2>
+      <div class="row g-4">
+        <div
+          class="col-md-4 d-flex justify-content-center"
+          v-for="(hobby, index) in hobbies"
+          :key="index"
+        >
+          <div class="hobby-card">
+            <div class="hobby-icon">
+              <i :class="hobby.icon"></i>
+            </div>
+            <h5 class="hobby-title">{{ hobby.title }}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -54,9 +73,16 @@ import { computed, onMounted } from "vue";
 import { useStore } from "vuex";
 const store = useStore();
 
-// Fetch the skills from the Vuex store
+
 const about = computed(() => store.state.about);
 const skills = computed(() => store.state.skills);
+
+
+const hobbies = [
+  { title: "Reading", icon: "bi bi-book" },
+  { title: "Traveling", icon: "bi bi-airplane" },
+  { title: "Coding", icon: "bi bi-laptop" }
+];
 
 onMounted(() => {
   store.dispatch("fetchAbout");
@@ -65,6 +91,11 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.container {
+  padding-top: 120px;
+  padding-bottom: 50px;
+}
+
 .section {
   background-color: white;
   border-radius: 12px;
@@ -72,16 +103,6 @@ onMounted(() => {
   padding: 20px;
 }
 
-.blog-content {
-  font-family: "Georgia", serif;
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #333;
-}
-
-.container {
-  padding-top: 100px; /* Adjusted padding to accommodate the fixed navbar */
-}
 .section-heading {
   font-size: 2rem;
   font-weight: bold;
@@ -94,12 +115,13 @@ onMounted(() => {
 .tech-card {
   border: 1px solid #ddd;
   border-radius: 8px;
-  margin-bottom: 2.5rem; /* Increase margin between rows of cards */
+  margin-bottom: 2.5rem;
   transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+  width: 100%;
+  height: 100%; 
 }
 
 .tech-card:hover {
@@ -107,8 +129,8 @@ onMounted(() => {
 }
 
 .card-img-top {
-  width: 100px;
-  height: 100px;
+  width: 150px; 
+  height: 150px;
   margin: 1rem auto;
   object-fit: cover;
 }
@@ -118,7 +140,34 @@ onMounted(() => {
   text-align: center;
 }
 
-/* Soft skills list styling */
+
+.hobby-card {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%; 
+}
+
+.hobby-card:hover {
+  transform: scale(1.05);
+  background-color: #e9ecef;
+}
+
+.hobby-icon {
+  font-size: 2.5rem;
+  color: #1d3557;
+  margin-bottom: 10px;
+}
+
+.hobby-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #495057;
+}
+
 .soft-skills-list {
   list-style-type: none;
   padding-left: 0;
@@ -137,22 +186,5 @@ onMounted(() => {
 .list-group-item i {
   margin-right: 10px;
   color: #28a745;
-}
-
-
-.row .col-md-4 .card {
-  width: 100%;
-}
-
-/* Typography for soft skills section */
-.soft-skills-list {
-  font-family: "Poppins", sans-serif;
-  color: #495057;
-}
-.row .col-md-4 {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  margin-bottom: 2rem; /* Add margin between the rows */
 }
 </style>
