@@ -80,9 +80,8 @@ onMounted(() => {
 }
 
 .container {
-  padding-top: 80px;
+  padding-top: 100px; /* Adjusted padding to accommodate the fixed navbar */
 }
-
 .section-heading {
   font-size: 2rem;
   font-weight: bold;
@@ -95,12 +94,11 @@ onMounted(() => {
 .tech-card {
   border: 1px solid #ddd;
   border-radius: 8px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem; /* Increase margin between rows of cards */
   transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* gap: 5rem; */
   height: 100%;
 }
 
@@ -141,12 +139,6 @@ onMounted(() => {
   color: #28a745;
 }
 
-/* Align cards and ensure uniform size */
-.row > .col-md-4 {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-}
 
 .row .col-md-4 .card {
   width: 100%;
@@ -156,5 +148,11 @@ onMounted(() => {
 .soft-skills-list {
   font-family: "Poppins", sans-serif;
   color: #495057;
+}
+.row .col-md-4 {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin-bottom: 2rem; /* Add margin between the rows */
 }
 </style>
