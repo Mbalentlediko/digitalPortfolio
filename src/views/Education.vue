@@ -4,29 +4,17 @@
       <div class="col">
         <div id="details">
           <h1 class="display-1 mt-5">Education</h1>
-          <div class="row gap-4" v-if="education?.length">
-            <div
-              class="card education-card col-sm-12 col-md-6 col-lg-5"
-              v-for="(item, index) in education"
-              :key="index"
-            >
-              <img
-                :src="item.image"
-                alt="education-img"
-                class="education-img"
-              />
+          <div v-if="education?.length" expcont>
+            <div v-for="(item, index) in education" class="card education-card "
+              :key="index">
+              <img :src="item.image" alt="education-img" class="education-img" />
 
               <div class="card-body">
                 <h5 class="heading">{{ item.place }}</h5>
                 <p>{{ item.year }}</p>
                 <p>{{ item.description }}</p>
 
-                <img
-                  v-if="item.laptopImage"
-                  :src="item.laptopImage"
-                  alt="Laptop Image"
-                  class="laptop-img"
-                />
+                <img v-if="item.laptopImage" :src="item.laptopImage" alt="Laptop Image" class="laptop-img" />
               </div>
             </div>
           </div>
@@ -61,7 +49,7 @@ onMounted(() => {
 
 .education-card {
   max-width: 30rem;
-  height: 20rem;
+  height: 28rem;
   border: none;
   border-radius: 10px;
   overflow: hidden;
@@ -75,7 +63,7 @@ onMounted(() => {
 }
 
 .education-img {
-  width: 100%;
+  width: 10rem;
   height: 10rem;
   object-fit: cover;
   border-bottom: 2px solid #ddd;
@@ -115,5 +103,10 @@ onMounted(() => {
   height: 14rem;
   object-fit: cover;
   border-bottom: 2px solid #ddd;
+}
+
+[expcont]{
+  display: flex;
+  flex-direction: row;
 }
 </style>
