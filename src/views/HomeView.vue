@@ -55,6 +55,9 @@ const navigateToContact = () => {
 .custom-rounded {
   border-radius: 80px;
 }
+.container {
+  padding-bottom: 100px; /* Space between content and footer */
+}
 #title, .display{
   font-family: 'Poppins', sans-serif;
   font-size: 3rem;
@@ -78,6 +81,21 @@ const navigateToContact = () => {
 .description {
   font-size: 1.2rem;
   line-height: 1.6;
+}
+button{
+  margin-bottom:20px;
+}
+img {
+  margin-bottom: 50px;
+}
+@media (max-width: 768px) {
+  img {
+    margin-bottom: 30px; /* Adjust space for smaller screens */
+  }
+
+  button {
+    margin-bottom: 15px; /* Adjust space for smaller screens */
+  }
 }
 
 </style>

@@ -5,15 +5,20 @@
         <div id="details">
           <h1 class="display-1">Projects</h1>
           <div class="row gap-4" v-if="projects?.length">
-            <div class="card project-card col-sm-12 col-md-6 col-lg-4" v-for="(item, index) in projects" :key="index"
-              data-aos="fade-up">
+            <div class="card project-card col-sm-12 col-md-6 col-lg-4" 
+                 v-for="(item, index) in projects" 
+                 :key="index" 
+                 data-aos="fade-up">
               <img :src="item.image" class="project-img" alt="project-img" loading="lazy" />
               <div class="card-body">
                 <h5 class="card-title">{{ item.name }}</h5>
                 <p class="card-text">{{ item.description }}</p>
                 <div class="d-flex justify-content-around buttons-box">
-                  <a class="btn btn-primary" :href="netlify" target="_blank">
+                  <a class="btn btn-primary" :href="item.github" target="_blank">
                     <i class="bi bi-github mx-2"></i> GitHub
+                  </a>
+                  <a class="btn btn-secondary" :href="item.liveSite" target="_blank">
+                    <i class="bi bi-eye mx-2"></i> View
                   </a>
                 </div>
               </div>
@@ -24,6 +29,7 @@
     </div>
   </div>
 </template>
+
 
 
 <script setup>
