@@ -17,7 +17,7 @@
                   <a class="btn btn-primary" :href="item.github" target="_blank">
                     <i class="bi bi-github mx-2"></i> GitHub
                   </a>
-                  <a class="btn btn-secondary" :href="item.liveSite" target="_blank">
+                  <a class="btn btn-secondary" :href="item.link" target="_blank">
                     <i class="bi bi-eye mx-2"></i> View
                   </a>
                 </div>
@@ -89,7 +89,6 @@ onMounted(() => {
   color: #6c757d;
 }
 
-/* Button styles */
 .buttons-box a {
   font-size: 0.9rem;
   text-decoration: none;

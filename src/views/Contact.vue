@@ -3,37 +3,35 @@
       <h2 class="section-heading">Contact Me</h2>
   
       <div class="row">
-        <!-- Contact Information and Icons on the Left -->
         <div class="col-md-6 d-flex flex-column align-items-start contact-info">
-          <!-- LinkedIn -->
+        
           <div class="info-item mb-3">
             <i class="bi bi-linkedin"></i>
-            <a href="#" class="info-link">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/diko-mbalentle-8a4a2a2b4/" class="info-link">LinkedIn</a>
           </div>
   
-          <!-- Phone -->
+        
           <div class="info-item mb-3">
             <i class="bi bi-telephone-fill"></i>
             <span class="info-text">083 564 5479</span>
           </div>
   
-          <!-- Gmail -->
           <div class="info-item mb-3">
             <i class="bi bi-envelope-fill"></i>
             <span class="info-text">dikombalentle9@gmail.com</span>
           </div>
   
-          <!-- Address -->
+     
           <div class="info-item mb-3">
             <i class="bi bi-geo-alt-fill"></i>
             <span class="info-text">Khayelitsha 7784</span>
           </div>
         </div>
   
-        <!-- Contact Form on the Right -->
+   
         <div class="col-md-6">
           <form @submit.prevent="submitForm">
-            <!-- Name -->
+       
             <div class="form-group mb-3">
               <label for="name" class="form-label">Name</label>
               <input
@@ -45,7 +43,6 @@
               />
             </div>
   
-            <!-- Email -->
             <div class="form-group mb-3">
               <label for="email" class="form-label">Email</label>
               <input
@@ -57,7 +54,6 @@
               />
             </div>
   
-            <!-- Message -->
             <div class="form-group mb-4">
               <label for="message" class="form-label">Message</label>
               <textarea
@@ -69,7 +65,7 @@
               ></textarea>
             </div>
   
-            <!-- Submit Button -->
+           
             <div class="d-grid">
               <button type="submit" class="btn submit-btn">Send Message</button>
             </div>
@@ -94,18 +90,20 @@
   </script>
   
   <style scoped>
-  /* Fonts */
+
   @import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Poppins:wght@400;500&display=swap');
   
   .container {
-    padding-top: 80px;
-    padding-bottom: 80px;
-    background-color: #ffffff; /* Changed to white */
+    margin-top: 80px; /* Space between the navbar and content */
+  margin-bottom: 80px; /* Space between the content and the footer */
+  padding-top: 40px; /* Internal padding within the content */
+  padding-bottom: 40px;
+    background-color: #ffffff;
   }
   
   .section-heading {
     font-size: 2.5rem;
-    font-family: 'Lora', serif; /* Professional heading font */
+    font-family: 'Lora', serif; 
     font-weight: bold;
     text-align: center;
     color: #4A4E69;
@@ -113,13 +111,13 @@
   }
   
   .form-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 5rem;
   }
   
   .form-label {
     font-size: 1.2rem;
     color: #4A4E69;
-    font-family: 'Poppins', sans-serif; /* Professional font for labels */
+    font-family: 'Poppins', sans-serif; 
   }
   
   .form-control {
@@ -150,9 +148,9 @@
     background-color: #4A4E69;
   }
   
-  /* Contact Information Section */
+ 
   .contact-info {
-    padding-top: 40px; /* Adjusted padding to move it up */
+    padding-top: 40px; 
   }
   
   .info-item {
