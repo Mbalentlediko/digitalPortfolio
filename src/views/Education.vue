@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col">
         <div id="details">
-          <!-- Education Section -->
+        
           <h1 class="display-1 mt-5">Education</h1>
 
           <div v-if="education?.length" class="education d-flex">
@@ -30,7 +30,7 @@
             <Spinner />
           </div>
 
-          <!-- Experience Section -->
+      
           <h1 class="display-1 mt-5">Experience</h1>
           <div class="experience-card mt-4">
             <h2>Life Choices Studio - Intern</h2>
@@ -126,7 +126,7 @@ onMounted(() => {
   height: fit-content;
 }
 
-/* Experience Section Styling */
+
 .experience-card {
   background-color: white;
   padding: 2rem;
@@ -148,7 +148,7 @@ onMounted(() => {
   color: #333;
 }
 
-/* Responsive Styling */
+
 @media screen and (max-width: 1000px) {
   .education {
     display: flex;

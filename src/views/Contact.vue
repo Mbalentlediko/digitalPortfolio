@@ -94,11 +94,11 @@
   @import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Poppins:wght@400;500&display=swap');
   
   .container {
-    margin-top: 80px; /* Space between the navbar and content */
-  margin-bottom: 80px; /* Space between the content and the footer */
-  padding-top: 40px; /* Internal padding within the content */
+    margin-top: 80px; 
+  margin-bottom: 80px; 
+  padding-top: 40px; 
   padding-bottom: 40px;
-    background-color: #ffffff;
+    background-color: #dec2bb;
   }
   
   .section-heading {

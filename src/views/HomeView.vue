@@ -56,7 +56,7 @@ const navigateToContact = () => {
   border-radius: 80px;
 }
 .container {
-  padding-bottom: 100px; /* Space between content and footer */
+  padding-bottom: 100px; 
 }
 #title, .display{
   font-family: 'Poppins', sans-serif;
@@ -90,11 +90,11 @@ img {
 }
 @media (max-width: 768px) {
   img {
-    margin-bottom: 30px; /* Adjust space for smaller screens */
+    margin-bottom: 30px;
   }
 
   button {
-    margin-bottom: 15px; /* Adjust space for smaller screens */
+    margin-bottom: 15px; 
   }
 }
 
