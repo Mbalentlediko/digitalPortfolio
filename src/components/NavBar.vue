@@ -43,9 +43,9 @@
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
-/* Navbar */
+
 .navbar {
-  background-color: #9A8C98; /* Dark navy for the navbar */
+  background-color: #9A8C98; 
   color: #f1faee;
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
@@ -54,17 +54,17 @@
   height: 100px;
 }
 
-/* Navbar Brand */
+
 .navbar-brand {
-  color: #f7f9fb; /* Soft White text */
+  color: #f7f9fb;
   font-size: 1.5rem;
   font-weight: 600;
   text-transform: uppercase;
 }
 
-/* Navbar Links */
+
 .nav-link {
-  color: #f7f9fb; /* Soft White text for links */
+  color:#080808; 
   font-weight: 400;
   font-size: 1.1rem;
   margin-left: 1rem;
@@ -86,7 +86,7 @@
 }
 
 .navbar a {
-  color: #f1faee; 
+  color: #080808; 
   text-decoration: none;
   margin: 0 10px;
 }

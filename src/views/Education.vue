@@ -1,41 +1,37 @@
 <template>
   <div class="container">
-    <div class="row">
+    <div class="row justify-content-center">
       <div class="col">
         <div id="details">
-        
-          <h1 class="display-1 mt-5">Education</h1>
 
-          <div v-if="education?.length" class="education d-flex">
-            <div
-              v-for="(item, index) in education"
-              :key="index"
-              class="card education-card"
-            >
-              <img
-                :src="item.image"
-                alt="education-img"
-                class="education-img card-img-top img-fluid"
-              />
-              <div class="card-body">
-                <h5 class="card-title">{{ item.place }}</h5>
-                <p class="card-text">
-                  {{ item.year }}
-                </p>
-                <p>{{ item.description }}</p>
+          <h1 class="display-1 text-center">Education</h1>
+
+          <div v-if="education?.length" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gap-3 justify-content-center">
+            <div v-for="(item, index) in education" :key="index" class="col d-flex justify-content-center">
+              <div class="card education-card">
+                <img :src="item.image" alt="education-img" class="education-img card-img-top img-fluid" />
+                <div class="card-body text-center">
+                  <h5 class="card-title">{{ item.place }}</h5>
+                  <p class="card-text">{{ item.year }}</p>
+                  <p>{{ item.description }}</p>
+                </div>
               </div>
             </div>
           </div>
+
           <div v-else>
             <Spinner />
           </div>
 
-      
-          <h1 class="display-1 mt-5">Experience</h1>
-          <div class="experience-card mt-4">
+          <h1 class="display-1 mt-5 text-center">Experience</h1>
+          <div class="experience-card mt-4 text-center">
             <h2>Life Choices Studio - Intern</h2>
             <p>
-              I am currently an intern at Life Choices Studio, where I am gaining hands-on experience in web development and collaborating on real-world projects. My responsibilities include assisting in front-end and back-end development, troubleshooting bugs, and working closely with in a team. While I am still upskilling through short courses and small side projects, I also actively contribute to group projects, which has helped me sharpen my technical skills and grow professionally.
+              I am currently an intern at Life Choices Studio, where I am gaining hands-on experience in web development
+              and collaborating on real-world projects. My responsibilities include assisting in front-end and back-end
+              development, troubleshooting bugs, and working closely with in a team. While I am still upskilling through
+              short courses and small side projects, I also actively contribute to group projects, which has helped me
+              sharpen my technical skills and grow professionally.
             </p>
           </div>
         </div>
@@ -60,7 +56,7 @@ onMounted(() => {
 });
 </script>
 
-<style scoped>
+<style>
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 
 .container {
@@ -69,8 +65,11 @@ onMounted(() => {
 }
 
 .education-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
   max-width: 30rem;
-  height: 20rem;
   border: none;
   border-radius: 10px;
   overflow: hidden;
@@ -108,24 +107,19 @@ onMounted(() => {
   margin-top: 70px;
 }
 
-.education-card:hover {
-  transform: translateY(-10px);
-}
-
 .education-img {
   width: 80%;
   aspect-ratio: 1;
-  object-fit: fill;
+  object-fit: cover;
   border-bottom: 2px solid #ddd;
-  margin-left: 2.5rem;
-  padding-block: 1rem;
 }
 
 .card {
   width: 23rem;
-  height: fit-content;
+  height: 26rem;
+  display: flex;
+  align-items: center;
 }
-
 
 .experience-card {
   background-color: white;
@@ -148,28 +142,36 @@ onMounted(() => {
   color: #333;
 }
 
+.card-body {
+  padding: 1rem;
+}
 
 @media screen and (max-width: 1000px) {
   .education {
     display: flex;
     flex-direction: column;
   }
+
   .container {
     padding: 4rem;
   }
 }
+
 @media screen and (max-width: 400px) {
   .card {
     width: 300px;
   }
+
   .container {
     padding: 4rem;
   }
 }
+
 @media screen and (max-width: 350px) {
   .card {
     width: 250px;
   }
+
   .container {
     padding-bottom: 4rem;
   }
