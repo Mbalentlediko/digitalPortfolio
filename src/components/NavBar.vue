@@ -86,7 +86,7 @@
 }
 
 .navbar a {
-  color: #080808; 
+  color: whitesmoke; 
   text-decoration: none;
   margin: 0 10px;
 }
